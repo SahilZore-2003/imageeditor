@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexcol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* start coding here  */
+.container{
+    height: 100vh;
+    background-color: #e4f2fe;
+    display: grid;
+    place-items: center;
+}
+
+main{
+    width: 60%;
+    min-height: 70%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+main h1{
+    font-size: 1.5rem;
+}
+
+main .options{
+    border: .5px solid rgba(0, 0, 0, 0.632);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.optionflex{
+    margin-block: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.image-container{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    height: 100%;
+}
+
+.image-container img{
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+    margin-block: 10px;
+
+}
+
+.buttons button{
+    background-color: white;
+    border: .5px solid rgba(0, 0, 0, 0.517);
+    padding: 10px 20px;
+    border-radius: 5px;
+    /* min-width: 40%; */
+}
+
+.optionflex .options{
+    width: 350px;
+}
+
+.subheading{
+    font-weight: 100;
+}
+
+#rangeinput{
+    width: 100%;
+}
+
+.align-options{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.align-options button{
+    background-color: white;
+    border: 1px solid gray;
+    padding: 10px;
+    border-radius: 10px;
+}
+.align-options button img{
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+
+.bottom button{
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 10px;
+    border: .5px solid gray;
+    cursor: pointer;
+}
+
+#reset{
+        color: gray;
+}
+
+#choose{
+    background-color: #5a6368;
+    color: white;
+}
+
+#save{
+    background-color: #485cbf;
+    color: white;
+}
+
+.active{
+    background-color: #485cbf !important;
+    color: rgb(255, 255, 255);
+}
+
+.image-container{
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 100%;
+}
+
+
+.image-container .loader{
+    /* background-color: #f2f2f2; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 300px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.image-container .loader:hover i{
+    color: #485cbf;
+}
+
+
+.image-container .loader i{
+    font-size: 100px;
+}
+
+.disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}

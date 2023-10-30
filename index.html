@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor Using Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2e7d1698d6.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <h1>Easy Image Editor</h1>
+
+            <div class="optionflex disabled" id="option-container">
+                <div class="options">
+                    <p class="subheading">filters</p>
+                    <div class="buttons">
+                        <button class="active" id="brightness">Brightness</button>
+                        <button id="saturate">Saturation</button>
+                        <button id="invert">Inversion</button>
+                        <button id="grayscale">Grayscale</button>
+                    </div>
+                    <div class="optionflex">
+                        <p class="subheading" id="filtername">Brightness</p>
+                        <p id="showrange">100%</p>
+                    </div>
+                    <div>
+                        <input type="range" name="" id="rangeinput" min="0" max="100" value="100">
+                    </div>
+                    <div>
+                        <p class="subheading">Rotate & flip</p>
+
+                        <div class="align-options">
+                            <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                            <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                            <button id="horizontal"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAATNJREFUWEft14ENwiAQBdDfTXQTnUQ3UTfRSXQTHcV8gwltOe4OaNImkDTGQHuPo4c4YGVtWJkHHaStSIsMHQDwYnuFS4sr9rcAXQFcQoQbAH4vbh2kpW4TGTqHF/OjzaayfweAsUbvXCpDHHACcASwFIqYN4BZEUggVg0xS6D+GCbYBeINFpSn7GNMEciCsoKmmGKQhrKAUpgqUA6lgSRMNUhC5X7LcpgmIG354q1JwzQF7Q2bIkFPAPyUmrvspw/iNjDFaEuWQ1WBUhiCLS+1hCoGSRgLiGOk5SsC5TBWkIRygzSMB5RCuUAWjKHYZkPi5TODePywlHYJKM7Uw3Ie4qHpXhrJcR8zxS1jFGsTR1jHJH9DtX3I9byeIS1dLTK0ur/S2qRd/S0y5AqoDe4gLUNfhPJzJfm13+4AAAAASUVORK5CYII=" /></button>
+                            <button id="vertical"><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAARVJREFUWEft1+ENgjAQBeDHJrqJbuIm6iZuopvoJpozNGka4O7e6w9IaEJSLXd8HLkGBqxsDCvzYAd5TyRaoQuAg5fMWf8AeHg5oiDDPAWUYY4extajIDuXRYUxWRCDSmEYUAaVxrCgCIrCKKAlFI1RQVMoCdMDVKNsHmrtpfbPtP1SHtsSrDry6AWSISXBJkAnAHbU41b9qOf292s8bK7E/i8xVSG74LUB1ed9m7U7gIJUYrcDUsquxM5WqFvHMIk20WXMjZW3SXlz7FEhw7zHnfqs7tgqqGBKVa1CEkoBtZguKBY0h5FRDMjDSKgsKIqhURlQFkOhoiAWk0ZFQe0rB7N5dv2UZgBUTLRCVHImaAd5VfsBKHtFJfqR90gAAAAASUVORK5CYII=" /></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-container">
+                    <div class="loader" id="image-loader" title="Click to add Image">
+                        <i class="fa-regular fa-image"></i>
+                    </div>
+                    <img id="image" style="display: none;" src="" alt="">
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div>
+                    <button id="reset">Reset filter</button>
+                </div>
+                <div>
+                    <input type="file" name="" id="fileinput" onchange="loadimage()" hidden>
+                    <button id="choose" onclick="addUserImage()" accept="image/png">Choose Image</button>
+                    <button id="save" onclick="saveImage()">Save Image</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
